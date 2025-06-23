@@ -7,7 +7,7 @@
 https://restaurant-finder-reyhan.vercel.app/
 ```
 
-# How to start the project
+# How to start the app
 - Clone the project
 ```
 git clone https://github.com/ReyhanGusnur/restaurant
