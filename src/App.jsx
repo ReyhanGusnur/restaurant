@@ -3,9 +3,11 @@ import { Loader, Plus } from 'lucide-react';
 import RestaurantCard from './components/RestaurantCard';
 import RestaurantDetail from './components/RestaurantDetail';
 import Header from './components/Header';
+import LoginPage from './components/LoginPage';
 import { convertMealToRestaurant } from './utils/dataUtils';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [displayedRestaurants, setDisplayedRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
@@ -112,6 +114,10 @@ function App() {
     setFilteredRestaurants(filtered);
   }, [filters, displayedRestaurants]);
 
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
   const loadMore = () => {
     setLoadingMore(true);
     
@@ -127,6 +133,11 @@ function App() {
       setLoadingMore(false);
     }, 500); // Small delay to show loading state
   };
+
+  // Show login page if not logged in
+  if (!isLoggedIn) {
+    return <LoginPage onLogin={handleLogin} />;
+  }
 
   if (loading) {
     return (
@@ -173,7 +184,7 @@ function App() {
         showFilters={showFilters}
         setShowFilters={setShowFilters}
       />
-      
+
       {/* Restaurant Grid */}
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
