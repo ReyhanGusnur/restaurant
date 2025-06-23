@@ -2,7 +2,7 @@
 - React Version: 19.1.0
 - Node version: 22.16.0
 
-# Access the website
+# Website URL
 ```
 https://restaurant-finder-reyhan.vercel.app/
 ```
