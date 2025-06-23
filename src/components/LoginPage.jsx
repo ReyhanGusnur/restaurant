@@ -44,7 +44,7 @@ const LoginPage = ({ onLogin }) => {
           <div className="mx-auto h-16 w-16 bg-blue-600 rounded-full flex items-center justify-center mb-6">
             <LogIn className="h-8 w-8 text-white" />
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">Restaurant Finder by Reyhan</h2>
           <p className="text-gray-600">Sign in to access Restaurant Finder</p>
         </div>
 
@@ -133,20 +133,6 @@ const LoginPage = ({ onLogin }) => {
               )}
             </button>
           </form>
-
-          {/* Demo Credentials */}
-          <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-            <h3 className="text-sm font-medium text-gray-700 mb-2">Demo Credentials:</h3>
-            <div className="text-sm text-gray-600 space-y-1">
-              <p><span className="font-medium">Username:</span> Restaurant</p>
-              <p><span className="font-medium">Password:</span> frontend123</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Footer */}
-        <div className="text-center text-sm text-gray-500">
-          <p>© 2024 Restaurant Finder. All rights reserved.</p>
         </div>
       </div>
     </div>
